@@ -1,81 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Quizz</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- ========================================================== -->
-  <!-- ======================= BOOTSTRAP ======================== -->
-  <!-- ========================================================== -->
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="login">
+        <div name='form-login'>
 
+            <h1>SIGN IN</h1>
 
-  <!-- ============= NAVBAR ================ -->
-  <nav class="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand ms-4"> Quizz App </a>
-      <div class="d-flex " role="search">
-        <button class="btn btn-danger mx-4 " type="submit"class="login-btn" id="login-btn" onclick="singupDataSave()">LogOut</button>
-      </div>
+            <label for="emailuserName">Email</label>
+            <input type="email" id="emailuserName" placeholder="Username" required>
+            <label for="pw">Password</label>
+            <input type="password" id="passworduserName" placeholder="Password" required>
+            <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
+
+        </div>
     </div>
-  </nav>
-
-  <!-- ====================QUESTION ANSWER WORK =================== -->
-
-
-  <div class="alldata">
-<div id="timer" class="time"></div>
-    <h3 class="one p-1" id="question"></h3> 
-    <div>
-      <div class="p-2 m-auto">
-        <label>
-          <input onclick="enableBtn()" value="1" type="radio" name="answers"> 
-          <span id="option1"></span>
-
-        </label>
-      </div>
-      <div class="p-2 m-auto">
-        <label>
-          <input onclick="enableBtn()"  value="2" type="radio" name="answers">
-          <span id="option2"></span>
-        </label>
-      </div>
-      <div class="p-2 m-auto">
-        <label>
-          <input onclick="enableBtn()"  value="3" type="radio" name="answers">
-          <span id="option3"></span>
-        </label>
-      </div>
+    </div>
     </div>
 
-
-    <button id="btn1" disabled  class="nxtbtn btn  " onclick="nextQuestion()"> NEXT </button>
-
-  </div>
-
-
-  <div id="result"></div>
-
-
-
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
 </body>
-
 </html>

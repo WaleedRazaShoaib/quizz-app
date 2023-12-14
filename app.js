@@ -5,7 +5,7 @@ var signUpUserEmail = document.getElementById('emailuserName');
 var signUpUserPassword = document.getElementById('passworduserName');
 var userloginEmail = document.getElementById('userloginEmail');
 var userPw = document.getElementById('userloginPassword');
-let emailRegax = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+var emailRegax = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
 function store() {
@@ -23,16 +23,14 @@ function store() {
             text: 'FILL THE PASSWORD!',
         })
 
-    }
-
-    else {
+    }else {
         localStorage.setItem('email', signUpUserEmail.value);
         localStorage.setItem('password',signUpUserPassword.value );
         Swal.fire({
             icon: 'success',
             title: 'Your Account  has been saved',
         })
-        location.href = "./login.html"
+location.href = "./login.html"
     }
     emailuserName.value = "";
     signUpUserPassword.value = "";
@@ -49,22 +47,22 @@ function check() {
             title: 'You have Log In the quizz ',
         })
         setTimeout(function(){
-            location.href = "./index.html"
+            location.href = "./quizz.html"
         },1000)
    
         userloginEmail.value ="" ;
         userloginPassword.value = "" ;
-    } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'PLEASE CREATE A ACCOUNT',
-            text: 'YOU ARE NOT SIGN IN',
-        })
+    } 
+    // else {
+    //     Swal.fire({
+    //         icon: 'error',
+    //         title: 'PLEASE CREATE A ACCOUNT',
+    //         text: 'YOU ARE NOT SIGN IN',
+    //     })
         
-    }
+    // }
  
 }
-
 
 // *******************************
 var questions = [
@@ -281,26 +279,26 @@ var min = 1;
 var sec = 10 ;
 var timer = document.getElementById("timer");
 
-var interval = setInterval(function(){
-    if(timer){
+// var interval = setInterval(function(){
+//     if(timer){
 
-        timer.innerHTML = `
-        ${min}:${sec}`
-        sec--
+//         timer.innerHTML = `
+//         ${min}:${sec}`
+//         sec--
         
-        if(sec < 0){
-            if(min < 1){
-                min =  1;
-                sec = 10;
+//         if(sec < 0){
+//             if(min < 1){
+//                 min =  1;
+//                 sec = 10;
                 
-            }
-            else{
+//             }
+//             else{
                 
-                nextQuestion()
-                min--
-                sec = 10;
-            }
-        }
-    }
-},1000)
+//                 nextQuestion()
+//                 min--
+//                 sec = 10;
+//             }
+//         }
+//     }
+// },1000)
 

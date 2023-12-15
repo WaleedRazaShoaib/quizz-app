@@ -53,15 +53,7 @@ function check() {
         userloginEmail.value ="" ;
         userloginPassword.value = "" ;
     } 
-    // else {
-    //     Swal.fire({
-    //         icon: 'error',
-    //         title: 'PLEASE CREATE A ACCOUNT',
-    //         text: 'YOU ARE NOT SIGN IN',
-    //     })
-        
-    // }
- 
+   
 }
 
 // *******************************
@@ -213,6 +205,9 @@ var questions = [
     }
 ]
 
+//   IDS GET ON GET CONTINUE QUESTIONS 
+
+
 var question = document.getElementById("question");
 var option1 = document.getElementById("option1");
 var option2 = document.getElementById("option2");
@@ -220,6 +215,8 @@ var option3 = document.getElementById("option3");
 var index = 0;
 var btn = document.getElementById("btn1");
 var score = 0;
+
+// CALL NEXTQUESTIONS FUNCTIONS  
 
 function nextQuestion() {
     var options = document.getElementsByName("answers");

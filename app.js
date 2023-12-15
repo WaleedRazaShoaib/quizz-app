@@ -275,30 +275,3 @@ function enableBtn() {
     btn.disabled = false;
 }
 
-var min = 1; 
-var sec = 10 ;
-var timer = document.getElementById("timer");
-
-// var interval = setInterval(function(){
-//     if(timer){
-
-//         timer.innerHTML = `
-//         ${min}:${sec}`
-//         sec--
-        
-//         if(sec < 0){
-//             if(min < 1){
-//                 min =  1;
-//                 sec = 10;
-                
-//             }
-//             else{
-                
-//                 nextQuestion()
-//                 min--
-//                 sec = 10;
-//             }
-//         }
-//     }
-// },1000)
-
